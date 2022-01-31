@@ -1,0 +1,14 @@
+version: "3"
+services:
+  watchtower:
+    container_name: watchtower
+    image: containrrr/watchtower 
+    restart: always
+    environment:
+      TZ: US/Denver
+      WATCHTOWER_CLEANUP: "true"
+      WATCHTOWER_DEBUG: "true"
+      WATCHTOWER_NOTIFICATIONS: benrdass.home@gmail.com
+      WATCHTOWER_SCHEDULE: 0 0 4 * * 6
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
