@@ -49,6 +49,10 @@ services:
         logo: "../assets/icons/plex.png"
         subtitle: "Movies, TV Shows"
         url: "http://192.168.100.198:32400/web/index.html#!/"
+      - name: "Pi-hole"
+        logo: "./assets/icons/pi-hole.png"
+        subtitle: "DNS Ad blocker, local DNS"
+        url: "http://192.168.100.2/admin/index.php"
 
   - name: "Servers"
     icon: "fas fa-cloud"

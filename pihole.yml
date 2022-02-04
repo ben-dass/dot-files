@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "80:80/tcp"
+    environment:
+      TZ: "America/Denver"
+      WEBPASSWORD: "Ben28121993!"
+    volumes:
+      - "/home/benjamin/portainer/pihole/etc-pihole:/etc/pihole"
+      - "/home/benjamin/portainer/pihole/etc-dnsmasq.d:/etc/dnsmasq.d"
+    restart: unless-stopped
+    networks:
+      hostNetwork:
+        ipv4_address: 192.168.100.2
+
+networks:
+  hostNetwork:
+    external: true
