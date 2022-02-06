@@ -12,8 +12,8 @@ services:
       - 80:80/tcp
       - 443:443/tcp
     volumes:
-      - /home/benjamin/portainer/adguardhome/workdir:/opt/adguardhome/work
-      - /home/benjamin/portainer/adguardhome/confdir:/opt/adguardhome/conf
+      - /home/benjamin/portainer_systems/adguardhome/workdir:/opt/adguardhome/work
+      - /home/benjamin/portainer_systems/adguardhome/confdir:/opt/adguardhome/conf
     restart: unless-stopped
     networks:
       hostNetwork:
