@@ -13,7 +13,7 @@ services:
             - /home/benjamin/portainer/wikijs/db-data:/var/lib/postgresql/data
         networks:
             hostNetwork:
-                ipv4_address: 192.168.100.52
+                ipv4_address: 192.168.<>.<>
 
     wiki:
         image: requarks/wiki:2
@@ -29,7 +29,7 @@ services:
         restart: unless-stopped
         networks:
             hostNetwork:
-                ipv4_address: 192.168.100.51
+                ipv4_address: 192.168.<>.<>
         # Cant manually set the port to 80 because the container attaches itself
         # directly to the IP instead of a host.
         # ports:
